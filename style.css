@@ -64,7 +64,7 @@ body {
 }
 
 .navbar nav a::after {
-    content: "";
+    content: '';
     height: 2px;
     width: 0;
     position: absolute;
@@ -93,7 +93,7 @@ body {
 
 .home {
     height: 100vh;
-    background-image: url("img/home.png");
+    background-image: url('img/home.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -104,7 +104,7 @@ body {
 }
 
 .home::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -254,7 +254,7 @@ body {
 }
 
 .rodape-link::after {
-    content: "";
+    content: '';
     height: 2px;
     width: 0;
     position: absolute;
@@ -335,6 +335,38 @@ body {
 
 .instagram-icon:hover {
     transform: scale(1.1);
+}
+
+.img-grid-home {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 5%;
+    transform: translateY(-50%);
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    z-index: 2;
+    padding: 1rem;
+}
+
+.img-grid-home img {
+    width: 310px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-grid-home img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 1740px) {
+    .img-grid-home {
+        display: grid;
+    }
 }
 
 @keyframes fadeIn {
