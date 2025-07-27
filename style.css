@@ -381,7 +381,7 @@ body {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
 }
 
-@media (min-width: 920px) and (max-width: 1740px) {
+@media (min-width: 980px) and (max-width: 1740px) {
     .img-grid-home {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
@@ -401,7 +401,7 @@ body {
     }
 }
 
-@media (max-width: 919px) {
+@media (max-width: 979px) {
     .img-grid-home {
         display: none;
     }
