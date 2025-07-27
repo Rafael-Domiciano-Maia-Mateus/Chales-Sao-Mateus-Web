@@ -388,9 +388,15 @@ body {
         top: 52%;
         right: 18%;
     }
+
     .img-grid-home img {
         width: 185px;
         height: auto;
+    }
+
+    .map-container iframe {
+        max-width: 600px;
+        height: 500px;
     }
 }
 
@@ -399,11 +405,21 @@ body {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: none;
     }
+
+    .map-container iframe {
+        max-width: 900px;
+        height: 520px;
+    }
 }
 
 @media (max-width: 979px) {
     .img-grid-home {
         display: none;
+    }
+
+    .map-container iframe {
+        max-width: 550px;
+        height: 450px;
     }
 }
 
@@ -492,6 +508,11 @@ body {
         padding: 0.8rem 1.5rem;
         font-size: 1.1rem;
         text-align: center;
+    }
+
+    .map-container iframe {
+        max-width: 350px;
+        height: 250px;
     }
 
     .description-box {
