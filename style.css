@@ -64,7 +64,7 @@ body {
 }
 
 .navbar nav a::after {
-    content: "";
+    content: '';
     height: 2px;
     width: 0;
     position: absolute;
@@ -92,19 +92,33 @@ body {
 }
 
 .home {
-    height: 100vh;
-    background-image: url("img/home.png");
-    background-size: cover;
-    background-position: center;
     position: relative;
+    height: 100vh;
     display: flex;
     align-items: center;
-    padding-left: 5%;
-    justify-content: flex-start;
+    justify-content: space-between;
+    padding: 5%;
+    color: #fff;
+    text-align: left;
+    overflow: hidden;
+}
+
+.home-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    filter: brightness(0.6);
+}
+
+.home-bg.active {
+    opacity: 1;
 }
 
 .home::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -273,7 +287,7 @@ body {
 }
 
 .rodape-link::after {
-    content: "";
+    content: '';
     height: 2px;
     width: 0;
     position: absolute;
@@ -356,6 +370,17 @@ body {
 .img-grid-home img:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
@@ -509,16 +534,5 @@ body {
     .map-container iframe {
         max-width: 900px;
         height: 520px;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
