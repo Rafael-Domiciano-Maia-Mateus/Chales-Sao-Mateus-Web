@@ -24,5 +24,5 @@ if (homeSection) {
         bgDivs[i].classList.remove('active');
         i = (i + 1) % bgDivs.length;
         bgDivs[i].classList.add('active');
-    }, 5000);
+    }, 20000);
 }
